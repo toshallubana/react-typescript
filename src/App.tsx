@@ -1,39 +1,41 @@
 import React from 'react';
 import './App.css';
-import Greet from './Components/Greet';
-import Person from './Components/Person';
-import PersonList from './Components/PersonList';
-import Status from './Components/Status';
-import Oscar from './Components/Oscar';
-import Heading from './Components/Heading';
-import Button from './Components/Button';
-import Input from './Components/Input';
+// import Greet from './Components/Greet';
+// import Person from './Components/Person';
+// import PersonList from './Components/PersonList';
+// import Status from './Components/Status';
+// import Oscar from './Components/Oscar';
+// import Heading from './Components/Heading';
+// import Button from './Components/Button';
+// import Input from './Components/Input';
+import Container from './Components/Container';
+import LoggedIn from './Components/state/LoggedIn';
 
 function App() {
 
-  const personName = {
-    firstName: 'Toshal',
-    lastName: 'lubana'
-  }
+//   const personName = {
+//     firstName: 'Toshal',
+//     lastName: 'lubana'
+//   }
 
-  const nameList = [
-    {
-      first: 'Toshal',
-      last: 'Lubana'
-    },
-    {
-      first: 'Naitik',
-      last: 'Lubana'
-    },
-    {
-      first: 'Jass',
-      last: 'Lubana'
-    }
-  ]
+//   const nameList = [
+//     {
+//       first: 'Toshal',
+//       last: 'Lubana'
+//     },
+//     {
+//       first: 'Naitik',
+//       last: 'Lubana'
+//     },
+//     {
+//       first: 'Jass',
+//       last: 'Lubana'
+//     }
+//   ]
 
   return (
     <div className="App">
-      <Greet name="toshal" messageCount={10} isLoggedIn={false} />
+      {/* <Greet name="toshal" messageCount={10} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
       <Status status='loading'/>
@@ -47,8 +49,11 @@ function App() {
         console.log('Button Clicked', event, id)
       }} />
 
+      <Input value='' handleChange={(event) => console.log(event)} /> */}
 
-      <Input value='' handleChange={(event) => console.log(event)} />
+      <Container styles={{border: '1px solid black', padding: '1rem'}} />
+
+      <LoggedIn />
     </div>
   );
 }
