@@ -8,8 +8,10 @@ import './App.css';
 // import Heading from './Components/Heading';
 // import Button from './Components/Button';
 // import Input from './Components/Input';
-import Container from './Components/Container';
-import LoggedIn from './Components/state/LoggedIn';
+// import Container from './Components/Container';
+// import LoggedIn from './Components/state/LoggedIn';
+
+import Counter from './Components/Counter';
 
 function App() {
 
@@ -51,9 +53,11 @@ function App() {
 
       <Input value='' handleChange={(event) => console.log(event)} /> */}
 
-      <Container styles={{border: '1px solid black', padding: '1rem'}} />
+      {/* <Container styles={{border: '1px solid black', padding: '1rem'}} />
 
-      <LoggedIn />
+      <LoggedIn /> */}
+
+      <Counter />
     </div>
   );
 }
