@@ -16,6 +16,9 @@ import {ThemeContextProvider} from './Components/context/ThemeContext';
 import {Box} from './Components/context/Box';
 import './App.css';
 
+import { UserContextProvider } from './Components/userContext/UserContext';
+import LoggedIn from './Components/state/LoggedIn';
+
 function App() {
 
 //   const personName = {
@@ -41,9 +44,12 @@ function App() {
   return (
     <div className="App">
 
-      <ThemeContextProvider>
+      <UserContextProvider>
+        <LoggedIn />
+      </UserContextProvider>
+      {/* <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
 
       {/* <Greet name="toshal" messageCount={10} isLoggedIn={false} />
       <Person name={personName} />
