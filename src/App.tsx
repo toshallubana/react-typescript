@@ -10,8 +10,11 @@ import './App.css';
 // import Input from './Components/Input';
 // import Container from './Components/Container';
 // import LoggedIn from './Components/state/LoggedIn';
+// import Counter from './Components/Counter';
 
-import Counter from './Components/Counter';
+import {ThemeContextProvider} from './Components/context/ThemeContext';
+import {Box} from './Components/context/Box';
+import './App.css';
 
 function App() {
 
@@ -37,6 +40,11 @@ function App() {
 
   return (
     <div className="App">
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+
       {/* <Greet name="toshal" messageCount={10} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
@@ -57,7 +65,7 @@ function App() {
 
       <LoggedIn /> */}
 
-      <Counter />
+      {/* <Counter /> */}
     </div>
   );
 }
